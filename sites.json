@@ -1,0 +1,12 @@
+{
+    "stp": {
+        "name": "Swords to Plowshares JPN [CSP Theme Deck]",
+        "uri": "http://www.hareruyamtg.com/en/g/gCSP-PC000007JP/",
+        "regex": "Stock (\\d+)"
+    },
+    "lotv": {
+        "name": "Liliana of the Veil JPN [ISD]",
+        "uri": "http://www.hareruyamtg.com/en/g/gISD000187JN/",
+        "regex": "Stock (\\d+)"
+    }
+}
