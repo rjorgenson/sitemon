@@ -9,7 +9,7 @@ for(var mon in monitors) {
         var regex = new RegExp(res.request.mon.regex)
         var match = res.body.match(regex)
         if (match[1] != res.request.mon.curval) {
-            console.log(res.request.mon.name+":", match[1])
+            console.log(res.request.mon.name+":", match[1], "-", res.request.mon.uri)
         }
     })
 }
