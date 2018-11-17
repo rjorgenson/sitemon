@@ -22,10 +22,11 @@ This script was designed to be able to run from a cronjob and send an email when
 - support monitoring more than one value on a single page without mulitple downloads
 - support different comparison methods
     - strings
-        - exact
+        - contains
+        - exact value
         - any change
     - numbers
         - less than
         - greater than
-        - any change
         - exact value
+        - any change
