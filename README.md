@@ -19,3 +19,4 @@ This script was designed to be able to run from a cronjob and send an email when
 
 # TODO
 - support regex's that match more than once on a page
+- support monitoring more than one value on a single page without mulitple downloads
