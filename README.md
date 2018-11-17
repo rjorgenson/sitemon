@@ -1,7 +1,7 @@
 # sitemon
 This is a basic script to monitor a URL for changes to a regex match.
 
-Create a site.json file in the root directory(this file will be ignored by git) with the following structure.
+Create a monitors.json file in the root directory(this file will be ignored by git) with the following structure.
 
 ```JSON
 {
