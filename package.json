@@ -1,0 +1,18 @@
+{
+  "name": "sitemon",
+  "version": "1.0.0",
+  "description": "monitor sites for changes",
+  "main": "mon.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "bin": {
+    "sitemon": "./mon.js"
+  },
+  "dependencies": {
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.5"
+  }
+}
