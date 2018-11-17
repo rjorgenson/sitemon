@@ -1,12 +1,12 @@
 {
   "name": "sitemon",
   "version": "1.0.0",
-  "description": "monitor sites for changes",
+  "description": "very basic script to monitor sites for change to a particular string",
   "main": "mon.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "rjorgenson@gmail.com",
   "license": "ISC",
   "bin": {
     "sitemon": "./mon.js"
