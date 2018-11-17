@@ -8,7 +8,7 @@ Create a monitors.json file in the root directory(this file will be ignored by g
     "monitorShortname": {
         "name": "Name of monitor as you want it to appear in output",
         "uri": "https://theurl.you/want/to/watch",
-        "regex": "^a (regexp|regex) to \\w+ on the page with the value you want to watch in \\(\\)'s$"
+        "regex": "^a (regexp|regex) to \\w+ on the page with the value you want to watch in \\(\\)'s$",
         "curval": "The current value of what the regex matches, so we know when it changes"
     }
 }
