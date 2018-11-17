@@ -18,4 +18,15 @@ Storing the regex in JSON creates some annoyance(as you can see in the example).
 This script was designed to be able to run from a cronjob and send an email when it notices a change from the value you have configured.
 
 # TODO
-- support monitoring more than one value
+- support regex's that match more than once on a page
+- support monitoring more than one value on a single page without mulitple downloads
+- support different comparison methods
+    - strings
+        - contains
+        - exact value
+        - any change
+    - numbers
+        - less than
+        - greater than
+        - exact value
+        - any change
