@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 var rp = require('request-promise-native');
 
-var monitors = require("./sites.json")
+var monitors = require("./monitors.json")
 
 for(var mon in monitors) {
     rp({ uri: monitors[mon].uri, method: "GET", resolveWithFullResponse: true, "mon": monitors[mon] })
