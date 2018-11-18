@@ -5,7 +5,8 @@ var rp = require('request-promise-native');
 var fs = require('fs');
 
 // load list of monitors
-var monitors = require("./monitors.json");
+var monitorsFile = __dirname + "/monitors.json"
+var monitors = require(monitorsFile);
 
 // loop through monitors and check their status
 for(var mon in monitors) {
@@ -51,7 +52,7 @@ for(var mon in monitors) {
             console.log(res.request.monData.name+":", match[1], "-", res.request.monData.uri);
             // write new value back to monitors.json
             monitors[mon].curval = match[matchNumber];
-            fs.writeFile('./monitors.json', JSON.stringify(monitors, null, 2), function (err) {
+            fs.writeFile(monitorsFile, JSON.stringify(monitors, null, 2), function (err) {
                 if (err) return console.log(err)
             });
         }
