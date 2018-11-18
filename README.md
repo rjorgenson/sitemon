@@ -59,4 +59,7 @@ This method will look for the `wantedval` as defined in the object in the RegExp
         - ~~exact value~~
         - ~~any change~~
 - build alerts into script over relying on cron
+    - email
+    - slack
+    - others?
 - ~~value tracking and writeback~~
