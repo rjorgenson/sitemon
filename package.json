@@ -9,7 +9,7 @@
   "author": "rjorgenson@gmail.com",
   "license": "ISC",
   "bin": {
-    "sitemon": "./mon.js"
+    "sitemon": "./sitemon.js"
   },
   "dependencies": {
     "request": "^2.88.0",
