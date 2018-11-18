@@ -28,17 +28,21 @@ for(var mon in monitors) {
                 if (parseInt(match[1]) < parseInt(data.curval)) updated = true;
                 break;
             case "exact":
+                // break if we don't have a wantedval set
+                if (!data.wantedval) console.log(mon+":", "Please confgiured a wantedval to use the exact method"); break;
                 // break if we already have the value we want
                 if (data.wantedval == data.curval) break;
                 if (match[1] == data.wantedval) updated = true;
                 break;
             case "contains":
+                // break if we don't have a wantedval set
+                if (!data.wantedval) console.log(mon+":", "Please confgiured a wantedval to use the contains method"); break;
                 // break if the curval already contains the wantedval
                 if (data.curval.indexOf(data.wantedval) != -1) break;
                 if (match[1].indexOf(data.wantedval) != -1) updated = true;
                 break;
             default:
-                console.log("The method", data.method, "is not supported.");
+                console.log(mon+":", "The method", data.method, "is not supported.");
         }
         // if value has changed notify and writeback new value
         if (updated) {
