@@ -15,7 +15,33 @@ for(var mon in monitors) {
         var mon = res.request.mon
         var regex = new RegExp(data.regex);
         var match = res.body.match(regex);
-        if (match[1] != data.curval) {
+        var updated = null;
+        // check current value against stored value via defined method
+        switch(data.method) {
+            case "any":
+                if (match[1] != data.curval) updated = true;
+                break;
+            case "number.gt":
+                if (parseInt(match[1]) > parseInt(data.curval)) updated = true;
+                break;
+            case "number.lt":
+                if (parseInt(match[1]) < parseInt(data.curval)) updated = true;
+                break;
+            case "exact":
+                // break if we already have the value we want
+                if (data.wantedval == data.curval) break;
+                if (match[1] == data.wantedval) updated = true;
+                break;
+            case "contains":
+                // break if the curval already contains the wantedval
+                if (data.curval.indexOf(data.wantedval) != -1) break;
+                if (match[1].indexOf(data.wantedval) != -1) updated = true;
+                break;
+            default:
+                console.log("The method", data.method, "is not supported.");
+        }
+        // if value has changed notify and writeback new value
+        if (updated) {
             // output new value with metadata
             console.log(res.request.monData.name+":", match[1], "-", res.request.monData.uri);
             // write new value back to monitors.json
