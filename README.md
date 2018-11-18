@@ -31,5 +31,4 @@ This script was designed to be able to run from a cronjob and send an email when
         - exact value
         - any change
 - build alerts into script over relying on cron
-- value tracking and writeback
-    - only alert once for a change then alert again on another change
+- ~~value tracking and writeback~~
