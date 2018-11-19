@@ -24,10 +24,10 @@ for(var mon in monitors) {
                 if (match[matchNumber] != data.curval) updated = true;
                 break;
             case "number.gt":
-                if (parseInt(match[matchNumber]) > parseInt(data.curval)) updated = true;
+                if (parseFloat(match[matchNumber]) > parseFloat(data.curval)) updated = true;
                 break;
             case "number.lt":
-                if (parseInt(match[matchNumber]) < parseInt(data.curval)) updated = true;
+                if (parseFloat(match[matchNumber]) < parseFloat(data.curval)) updated = true;
                 break;
             case "exact":
                 // break if we don't have a wantedval set
